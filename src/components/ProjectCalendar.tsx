@@ -204,16 +204,24 @@ export function ProjectCalendar({ isEditMode, stages }: ProjectCalendarProps) {
       
       {/* Legend */}
       <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200 mb-8">
-        <h4 className="font-semibold text-gray-700 mb-4">Обозначения:</h4>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {stages.map((stage, index) => (
-            <div key={stage.id} className="flex items-center gap-3">
-              <div className={`w-4 h-4 rounded-full ${colors[index % colors.length]}`} />
-              <span className="text-gray-700">
-                Этап {index + 1}: {stage.title}
-              </span>
-            </div>
-          ))}
+        <h4 className="text-2xl font-bold text-gray-800 mb-4">Обозначения:</h4>
+        <div className="flex flex-col gap-4">
+          {stages.map((stage, index) => {
+            const colorClass = colors[index % colors.length];
+            return (
+              <div 
+                key={stage.id} 
+                className="flex items-center gap-3"
+              >
+                <div 
+                  className={`w-4 h-4 rounded-full flex-shrink-0 ${colorClass}`}
+                />
+                <span className="text-gray-700">
+                  Этап {index + 1}: {stage.title}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
 
