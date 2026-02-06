@@ -36,9 +36,9 @@ export function ProjectCalendar({ isEditMode, stages }: ProjectCalendarProps) {
   const getDefaultRanges = (): StageDateRange[] => {
     return [
       { start: '2026-02-03', end: '2026-02-06', stageId: '1' },
-      { start: '2026-02-09', end: '2026-02-24', stageId: '2' },
-      { start: '2026-02-25', end: '2026-03-04', stageId: '3' },
-      { start: '2026-03-05', end: '2026-03-13', stageId: '4' },
+      { start: '2026-02-09', end: '2026-03-02', stageId: '2' },
+      { start: '2026-02-25', end: '2026-03-10', stageId: '3' },
+      { start: '2026-03-05', end: '2026-03-18', stageId: '4' },
     ];
   };
 
